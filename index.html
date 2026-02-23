@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="logo">Digitalians Task</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">Change Theme</button>
+    </nav>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul class="styled-list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="quote-section">
+                <blockquote class="fancy-quote">
+                    Success is not final, failure is not fatal: it is the courage to continue that counts.
+                </blockquote>
+            </section>
+
+            <section class="cards-container">
+                <div class="card">
+                    <span class="badge">New</span>
+                    <div class="card-img"></div>
+                    <div class="card-info">
+                        <h3>Advanced CSS</h3>
+                        <p>Mastering variables and positions.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"></div>
+                    <div class="card-info">
+                        <h3>Creative Design</h3>
+                        <p>Using pseudo-elements for beauty.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fixed Nav</td>
+                            <td>✅ Done</td>
+                        </tr>
+                        <tr>
+                            <td>Sticky Sidebar</td>
+                            <td>✅ Done</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Variables</td>
+                            <td>✅ Done</td>
+                        </tr>
+                        <tr>
+                            <td>Dark Mode</td>
+                            <td>✅ Done</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.onclick = () => document.body.classList.toggle('dark-theme');
+    </script>
+</body>
+
+</html>

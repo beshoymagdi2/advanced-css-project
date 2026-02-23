@@ -1,0 +1,172 @@
+/* Task 3: CSS Variables Definition */
+:root {
+    --primary-color: #4a6cf7;
+    --bg-color: #f4f7fe;
+    --text-color: #2d3436;
+    --card-bg: #ffffff;
+    --spacing: 20px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --card-bg: #16213e;
+    --primary-color: #00d2ff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    padding-top: 80px;
+    /* عشان الـ Fixed Nav */
+}
+
+/* Task 1.1: Fixed Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    /* عشان يفضل فوق كل حاجة */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+/* Task 2.1: Hover & Active Pseudo-classes */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.nav-links a:active {
+    transform: translateY(2px);
+}
+
+/* Layout Grid */
+.layout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+/* Task 1.2: Sticky Sidebar */
+.sidebar {
+    width: 250px;
+    position: sticky;
+    top: 90px;
+    /* بيثبت لما تنزل سكرول */
+    height: fit-content;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Task 2.2: nth-child styling */
+.styled-list li {
+    padding: 10px;
+    list-style: none;
+}
+
+.styled-list li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.styled-list li:nth-child(even) {
+    background: transparent;
+}
+
+/* Task 1.3: Card & Absolute Badge */
+.card {
+    position: relative;
+    /* Relative container */
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: crosshair;
+    /* Custom cursor */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+/* Task 2.4: Fancy Quote with Pseudo-elements */
+.fancy-quote {
+    position: relative;
+    padding: 40px;
+    font-style: italic;
+    background: var(--card-bg);
+    margin: 40px 0;
+    border-left: 5px solid var(--primary-color);
+}
+
+.fancy-quote::before {
+    content: open-quote;
+    font-size: 80px;
+    color: var(--primary-color);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.2;
+}
+
+.fancy-quote::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    float: left;
+    margin-right: 10px;
+}
+
+/* Tables Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
